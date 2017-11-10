@@ -6,7 +6,7 @@
     <% if dose.persisted? %>
       <li>
         <%= dose.description %> <%= dose.ingredient.name %>
-        <%= link_to "x", dose_path(dose), method: :delete %>
+
       </li>
     <% end %>
   <% end %>
