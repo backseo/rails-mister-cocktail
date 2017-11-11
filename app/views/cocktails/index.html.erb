@@ -4,11 +4,13 @@
   <p><%= link_to 'Add cocktails', new_cocktail_path %></p>
 
     <div class="row" style="border: green 1px dotted">
-      <div class= "col-sm" style="border: red 1px solid">
+      <div class= "col-sm">
         <ul  class="list-inline">
           <% @cocktails.each do |cocktail| %>
             <li  class="list-inline-item">
-              <div class="cards">
+              <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_tag("n9agf5ktoevunji483lz.jpg", :width=>283, :crop=>"scale") %>')">
+  >
                 <span class="cards-category">POPULAR</span>
                 <div class="cards-description">
                   <h3><%= cocktail.name %></h3>
@@ -24,7 +26,7 @@
 </div><!--fin container -->
 
 
-
+<%= cl_image_tag("n9agf5ktoevunji483lz.jpg", :width=>283, :crop=>"scale") %>
 
 
 
