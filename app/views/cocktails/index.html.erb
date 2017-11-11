@@ -1,23 +1,27 @@
 
 <div class="container">
   <h1>Tous mes Cocktails</h1>
-    <p><%= link_to 'Add cocktails', new_cocktail_path %></p>
-  <div class="row">
-    <ul>
-      <% @cocktails.each do |cocktail| %>
-        <li>
-          <div class= "col-xs-12 col-sm-4">
-            <div class="cards">
-              <h3><%= cocktail.name %></h3>
-              <p><%= link_to 'View détails', cocktail_path(cocktail[:id]) %></p>
-            </div>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div><!--fin container -->
+  <p><%= link_to 'Add cocktails', new_cocktail_path %></p>
 
+    <div class="row" style="border: green 1px dotted">
+      <div class= "col-sm" style="border: red 1px solid">
+        <ul  class="list-inline">
+          <% @cocktails.each do |cocktail| %>
+            <li  class="list-inline-item">
+              <div class="cards">
+                <span class="cards-category">POPULAR</span>
+                <div class="cards-description">
+                  <h3><%= cocktail.name %></h3>
+                  <p><%= link_to 'View détails', cocktail_path(cocktail[:id]) %></p>
+                </div>
+                <img src="http://placehold.it/50x50" alt="" class="avatar cards-image">
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div><!--fin col-xs-12 -->
+    </div>
+</div><!--fin container -->
 
 
 
