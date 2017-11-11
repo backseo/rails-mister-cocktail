@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "layouts#home"
+  root "cocktails#index"
 
 
   resources :cocktails, only: [:show, :new, :create, :destroy] do
