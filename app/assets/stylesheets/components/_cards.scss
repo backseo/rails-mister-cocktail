@@ -1,13 +1,11 @@
 .cards {
-  background: linear-gradient(135deg,
-    rgba(0,0,0,0.8) 0%,
-    rgba(0,0,0,0.3) 50%),
-url("<%= cl_image_tag("20150724190206-success-focus-life-achievements_bzedts.jpg", :width=>250, :crop=>"scale") %>");
+  background-color: red;
 position: relative;
 height: 190px;
 width: 300px;
 background-size: cover;
 padding: 10px;
+border: blue 1px solid;
 border-radius: 5px;
 
 }
