@@ -7,7 +7,7 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+    <%= link_to 'All cocktails', root_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
     <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
 
@@ -16,7 +16,7 @@
       <div class="dropdown">
         <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li><%= link_to 'All cocktails', root_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
           <li><a href="#">Dashboard</a></li>
           <li><a href="#">Log Out</a></li>
         </ul>
@@ -29,7 +29,7 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
+        <li><%= link_to 'All cocktails', root_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><a href="#">Trips</a></li>
         <li><a href="#">Messagese</a></li>
       </ul>

@@ -1,18 +1,31 @@
 
-<%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
-<h2><%= @cocktail.name %></h2>
-<%= link_to 'delete', cocktail_path(@cocktail), method: :delete  %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="img-show">
+        <%= cl_image_tag @cocktail.picture, height: 300, width: 400, crop: :fill %>
+        <h2><%= @cocktail.name %></h2>
+        <%= link_to 'delete', cocktail_path(@cocktail), method: :delete  %>
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+              <% if dose.persisted? %>
+                <li>
+                  <%= dose.description %> <%= dose.ingredient.name %>
+                  <%= link_to 'X', dose_path(dose), method: :delete %>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+        <div class="form">
+            <%= render "doses/form" %>
+          </div>
+    </div>
+  </div>
+</div>
 
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <% if dose.persisted? %>
-      <li>
-        <%= dose.description %> <%= dose.ingredient.name %>
-        <%= link_to 'X', dose_path(dose), method: :delete %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
 
-<%= render "doses/form" %>
+
+

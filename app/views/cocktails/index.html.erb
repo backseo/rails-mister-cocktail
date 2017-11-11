@@ -1,33 +1,40 @@
+<div class="banner">
+  <div class="banner-content">
+    <h1>Mister Cocktails</h1>
+    <p>All cocktails you can desire !</p>
 
+    <div>
+      <%= link_to 'Fly in cocktails', new_cocktail_path, class: "btn btn-primary" %>
+      <%= link_to ' a cocktail', new_cocktail_path, class: "btn btn-primary" %>
+
+    </div>
+  </div>
+</div>
 
 <div class="container">
-  <h1>Tous mes Cocktails</h1>
-  <p><%= link_to 'Add cocktails', new_cocktail_path %></p>
+  <div class="row">
+    <div class= "col-sm">
+      <ul  class="list-inline">
+        <% @cocktails.each do |cocktail| %>
+          <li  class="list-inline-item">
+            <div class="cards" style="background: linear-gradient(rgba(0,0,250,0.3), rgba(0,0,0,0.2)">
 
-    <div class="row" style="border: green 1px dotted">
-      <div class= "col-sm">
-        <ul  class="list-inline">
-          <% @cocktails.each do |cocktail| %>
-            <li  class="list-inline-item">
-              <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_tag("n9agf5ktoevunji483lz.jpg", :width=>283, :crop=>"scale") %>')">
-  >
-                <span class="cards-category">POPULAR</span>
-                <div class="cards-description">
-                  <h3><%= cocktail.name %></h3>
-                  <p><%= link_to 'View détails', cocktail_path(cocktail[:id]) %></p>
-                </div>
-                <img src="http://placehold.it/50x50" alt="" class="avatar cards-image">
+              <span class="cards-category">POPULAR</span>
+              <div class="cards-description">
+                <h3><%= cocktail.name %></h3>
+                <p><%= link_to 'View détails', cocktail_path(cocktail[:id]) %></p>
               </div>
-            </li>
-          <% end %>
-        </ul>
-      </div><!--fin col-xs-12 -->
-    </div>
+              <img src="http://unsplash.it/50x50.random" alt="" class="avatar cards-image">
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div><!--fin col-xs-12 -->
+  </div>
 </div><!--fin container -->
 
 
-<%= cl_image_tag("n9agf5ktoevunji483lz.jpg", :width=>283, :crop=>"scale") %>
+
 
 
 
