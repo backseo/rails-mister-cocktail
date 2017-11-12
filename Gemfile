@@ -36,8 +36,9 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
 
-gem 'carrierwave', '~> 0.11.2'
 gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
+
 gem 'figaro'
 
 # Use Capistrano for deployment

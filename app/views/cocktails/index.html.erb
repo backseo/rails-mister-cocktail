@@ -4,9 +4,7 @@
     <p>All cocktails you can desire !</p>
 
     <div>
-      <%= link_to 'Fly in cocktails', new_cocktail_path, class: "btn btn-primary" %>
-      <%= link_to ' a cocktail', new_cocktail_path, class: "btn btn-primary" %>
-
+      <%= link_to 'Create cocktail', new_cocktail_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>
@@ -17,14 +15,14 @@
       <ul  class="list-inline">
         <% @cocktails.each do |cocktail| %>
           <li  class="list-inline-item">
-            <div class="cards" style="background: linear-gradient(rgba(0,0,250,0.3), rgba(0,0,0,0.2)">
+            <div class="cards" style="background: linear-gradient(rgba(0,0,250,0.3), rgba(250,0,0,0.2)">
 
-              <span class="cards-category">POPULAR</span>
+              <span class="cards-category">Mister Cocktails</span>
               <div class="cards-description">
                 <h3><%= cocktail.name %></h3>
                 <p><%= link_to 'View détails', cocktail_path(cocktail[:id]) %></p>
               </div>
-              <img src="http://unsplash.it/50x50.random" alt="" class="avatar cards-image">
+              <img_tag alt="" class="avatar cards-image">
             </div>
           </li>
         <% end %>

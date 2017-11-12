@@ -2,8 +2,6 @@
 class DosesController < ApplicationController
   before_action :set_cocktail, only: [:create]
 
-
-
   def create
     # @dose = Dose.new(dose_params)
     # @dose.cocktail = @cocktail
@@ -30,6 +28,6 @@ class DosesController < ApplicationController
   end
 
   def dose_params
-    params.require(:dose).permit(:ingredient_id, :description)
+    params.require(:dose).permit(:ingredient_id, :description, :photo, :photo_cache)
   end
 end
