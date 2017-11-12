@@ -1,4 +1,7 @@
 class CocktailsController < ApplicationController
+  def photo
+
+  end
   def home
 
   end

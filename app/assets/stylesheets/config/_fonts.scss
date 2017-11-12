@@ -1,9 +1,9 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700|Playfair+Display');
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$body-font: 'News Cycle', sans-serif;
+$headers-font: 'Playfair Display', serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
