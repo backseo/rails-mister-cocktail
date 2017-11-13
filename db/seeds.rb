@@ -17,28 +17,47 @@ puts "ingredients added in db !"
 
 Cocktail.destroy_all
 puts "cleaning cocktails..."
-  Cocktail.create(name: "Old Fashioned",
-    remote_photo_url: 'http://res.cloudinary.com/dy4rog9h0/image/upload/c_scale,w_180/v1510453534/mister%20cocktails/2679e0dd.png')
+  Cocktail.create(name: "Old Fashioned")
   Cocktail.create(name: "Daiquiri")
+
   Cocktail.create(name: "Margarita")
+
   Cocktail.create(name: "Sidecar")
+
   Cocktail.create(name: "French 75")
+
   Cocktail.create(name: "Bloody Mary")
+
   Cocktail.create(name: "Irish Coffee")
+
   Cocktail.create(name: "Jack Rose")
+
   Cocktail.create(name: "Negroni")
+
   Cocktail.create(name: "Boulevardier")
+
   Cocktail.create(name: "Sazerac")
+
   Cocktail.create(name: "Vieux Carré")
+
   Cocktail.create(name: "Ramos Gin Fizz")
+
   Cocktail.create(name: "Mint Julep")
+
   Cocktail.create(name: "Whiskey Sour")
+
   Cocktail.create(name: "Mai Tai")
+
   Cocktail.create(name: "Planter's Punch")
+
   Cocktail.create(name: "Pisco Sour")
+
   Cocktail.create(name: "Cosmopolitan")
+
   Cocktail.create(name: "Tom Collins")
+
   Cocktail.create(name: "Last Word")
+
 
 puts "cocktails added in db !"
 
