@@ -18,6 +18,7 @@ puts "ingredients added in db !"
 Cocktail.destroy_all
 puts "cleaning cocktails..."
   Cocktail.create(name: "Old Fashioned")
+
   Cocktail.create(name: "Daiquiri")
 
   Cocktail.create(name: "Margarita")
