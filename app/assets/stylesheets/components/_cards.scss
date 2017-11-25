@@ -1,5 +1,5 @@
 .cards {
-background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @product.photo, height: 300, width: 400, crop: :fill %>');
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>');
 position: relative;
 height: 190px;
 width: 300px;
@@ -7,18 +7,18 @@ background-size: cover;
 padding: 10px;
 border-radius: 5px;
 margin: 20px;
-
 }
+
 .cards-category {
 color: white;
 position: absolute;
-top: 10px;
-left: 10px;
+right: 20px;
 }
+
 .cards-description {
-  color: white;
+color: white;
 position: absolute;
-bottom: 0px;
+bottom: 20px;
 }
 .cards-image {
   color: white;
@@ -29,3 +29,7 @@ right:10px;
 .row {
 
 }
+
+.cards-description h3 {
+    text-align: center;
+  }

@@ -1,5 +1,7 @@
 {
   "name": "rails-mister-cocktail",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "spin.js": "^3.0.0"
+  }
 }

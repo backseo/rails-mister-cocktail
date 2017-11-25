@@ -33,6 +33,10 @@ class CocktailsController < ApplicationController
     redirect_to root_path
   end
 
+  def photo
+    @cocktail = Cocktail.find(params[:id], [:photo])
+  end
+
   private
 
   def cocktail_params

@@ -2,38 +2,39 @@
   <div class="banner-content">
     <h1>Mister Cocktails</h1>
     <p>List and create all cocktails you can desire !</p>
-
+<div class="banner-img"><%= cl_image_tag("mister cocktails/920a786b.png", :width=>98, :crop=>"scale") %></div>
     <div>
       <%= link_to 'Create cocktails', new_cocktail_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class= "col-sm">
-      <ul  class="list-inline">
-        <% @cocktails.each do |cocktail| %>
-          <li  class="list-inline-item">
-            <div class="cards">
-              <span class="cards-category">Mister Cocktails</span>
-              <div class="cards-description">
-                <h3><%= cocktail.name %></h3>
-                <div>
-                  <%= link_to 'View détails', cocktail_path(cocktail[:id]) %>
-                  <%= link_to 'delete', cocktail_path(cocktail[:id]), method: :delete  %>
+      <div class="container">
+    <div class="row">
+      <div class= "col-sm">
+        <ul  class="list-inline">
+          <% @cocktails.each do |cocktail| %>
+            <li  class="list-inline-item">
+              <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)">
+
+                <span class="cards-category">Mister Cocktails</span>
+                <div class="cards-description">
+                  <h3><%= cocktail.name %></h3>
+                  <div>
+                    <%= link_to 'View détails', cocktail_path(cocktail[:id]) %>
+                    <%= link_to 'delete', cocktail_path(cocktail[:id]), method: :delete  %>
+
+                  </div>
 
                 </div>
 
               </div>
-
-            </div>
-          </li>
-        <% end %>
-      </ul>
-    </div><!--fin col-xs-12 -->
-  </div>
-</div><!--fin container -->
+            </li>
+          <% end %>
+        </ul>
+      </div><!--fin col-xs-12 -->
+    </div>
+  </div><!--fin container -->
 
 
 
