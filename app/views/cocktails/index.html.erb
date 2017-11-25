@@ -15,15 +15,14 @@
         <ul  class="list-inline">
           <% @cocktails.each do |cocktail| %>
             <li  class="list-inline-item">
-              <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)">
-
+              <div class="cards">
                 <span class="cards-category">Mister Cocktails</span>
                 <div class="cards-description">
                   <h3><%= cocktail.name %></h3>
                   <div>
                     <%= link_to 'View détails', cocktail_path(cocktail[:id]) %>
-                    <%= link_to 'delete', cocktail_path(cocktail[:id]), method: :delete  %>
-
+                    <%= link_to 'Delete', cocktail_path(cocktail[:id]), method: :delete  %>
+                    <%= link_to 'Update', cocktail_path(cocktail[:id]) %>
                   </div>
 
                 </div>

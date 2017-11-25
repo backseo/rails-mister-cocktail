@@ -6,15 +6,17 @@
 
         <div class="photo">
           <h2><%= @cocktail.name %></h2>
-          <%= cl_image_tag @cocktail.photo, height: 150, width: 150, crop: :fill %>
+          <%= cl_image_tag @cocktail.photo, crop: :fill %>
         </div>
         <div class="formul">
           <ul>
           <% @cocktail.doses.each do |dose| %>
             <% if dose.persisted? %>
             <li>
-              <%= dose.ingredient.name %><%= dose.description %>
-              <%= link_to 'X', dose_path(dose), method: :delete %>
+              <p><%= dose.ingredient.name %> - <%= dose.description %>
+                -- <%= link_to 'X', dose_path(dose), method: :delete %>
+              </p>
+
 
             </li>
             <% end %>

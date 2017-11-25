@@ -17,7 +17,7 @@ puts "ingredients added in db !"
 
 Cocktail.destroy_all
 puts "cleaning cocktails..."
-  Cocktail.create(name: "Old Fashioned")
+  Cocktail.create(name: "Old Fashioned", url(cl_image_path ''))
 
   Cocktail.create(name: "Daiquiri")
 
