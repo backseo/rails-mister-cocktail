@@ -14,6 +14,12 @@ class DosesController < ApplicationController
       render "cocktails/show"
     end
 
+  def update
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.update(cocktail_params)
+    redirect_to cocktail_path(@cocktail)
+  end
+
   end
 
   def destroy

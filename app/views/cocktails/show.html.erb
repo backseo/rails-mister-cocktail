@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    <p><%= link_to 'delete', cocktail_path(@cocktail), method: :delete  %></p>
+    <p><%= link_to 'Delete this cocktail', cocktail_path(@cocktail), method: :delete  %></p>
       <div class="dose-form-box">
 
         <div class="photo">
@@ -13,11 +13,9 @@
           <% @cocktail.doses.each do |dose| %>
             <% if dose.persisted? %>
             <li>
-              <p><%= dose.ingredient.name %> - <%= dose.description %>
-                -- <%= link_to 'X', dose_path(dose), method: :delete %>
+              <p><%= dose.ingredient.name %> : <%= dose.description %>
+                <%= link_to '[ X ]', dose_path(dose), method: :delete %>
               </p>
-
-
             </li>
             <% end %>
           <% end %>
