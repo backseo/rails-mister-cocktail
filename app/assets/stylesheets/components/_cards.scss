@@ -8,8 +8,14 @@ width: 300px;
 padding: 10px;
 border-radius: 5px;
 margin: 20px;
-box-shadow: 2px 2px 4px 1px;
+box-shadow: 1px 1px 2px 1px;
 }
+
+.tagg:hover {
+  box-shadow: 2px 2px 4px 2px;
+  opacity: 50%;
+
+  }
 
 .cards-category {
 color: white;
@@ -35,5 +41,5 @@ right: 20px;
 }
 
 .crud-line a:hover {
-    color: white;
-  }
+  color: white;
+}

@@ -1,9 +1,10 @@
+<div class="crud-links">
+  <%= link_to 'Delete this cocktail', cocktail_path(@cocktail), method: :delete  %>
+</div>
 <div class="container">
   <div class="row">
     <div class="col">
-    <p><%= link_to 'Delete this cocktail', cocktail_path(@cocktail), method: :delete  %></p>
       <div class="dose-form-box">
-
         <div class="photo">
           <h2><%= @cocktail.name %></h2>
           <%= cl_image_tag @cocktail.photo, crop: :fill %>
@@ -13,7 +14,7 @@
           <% @cocktail.doses.each do |dose| %>
             <% if dose.persisted? %>
             <li>
-              <p><%= dose.ingredient.name %> : <%= dose.description %>
+              <p><%= dose.ingredient.name %> : <%= dose.quantitée %>
                 <%= link_to '[ X ]', dose_path(dose), method: :delete %>
               </p>
             </li>
@@ -21,13 +22,12 @@
           <% end %>
           </ul>
           <div><%= render 'doses/form' %></div>
+          <%= @cocktail.description %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 
 
 
