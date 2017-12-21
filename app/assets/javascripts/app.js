@@ -1,9 +1,7 @@
-const warn = document.querySelector('.warning');
-// window.setInterval(function(){
-//   warn.classList.toggle('red')
-// }, 2000)
+
+  var warn = document.querySelector('.warning');
+  window.setInterval(function(){
+  warn.classList.toggle('red');
+  }, 3000)
 
 
-warn.addEventListener('click', function(){
-  warn.classList.add('red');
-});
