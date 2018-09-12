@@ -1,7 +1,7 @@
 
-  var warn = document.querySelector('.warning');
-  window.setInterval(function(){
+var warn = document.querySelector('.warning');
+window.setInterval(function(){
   warn.classList.toggle('red');
-  }, 3000)
+}, 1000);
 
 
