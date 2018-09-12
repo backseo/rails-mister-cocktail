@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner foo">
   <div class="banner-content">
     <h1>Mister Cocktails</h1>
     <p>List and create all cocktails you can desire !</p>
@@ -9,25 +9,23 @@
   </div>
 </div>
 
-      <div class="container">
+  <div class="container">
     <div class="row">
       <div class= "col-sm">
         <ul  class="list-inline">
           <% @cocktails.each do |cocktail| %>
             <li  class="list-inline-item">
-              <div class="cards">
+              <div class="cards tagg" style="background-image: linear-gradient(to bottom right, lightblue, rgba(10,0,80,0.1)), url(http://quizz.fr/files/2012/09/cocktail.jpg) ">
                 <span class="cards-category">Mister Cocktails</span>
                 <div class="cards-description">
-                  <h3><%= cocktail.name %></h3>
-                  <div>
+                  <h2><%= cocktail.name %></h2>
+                  <div class="crud-line">
                     <%= link_to 'View détails', cocktail_path(cocktail[:id]) %>
-                    <%= link_to 'Delete', cocktail_path(cocktail[:id]), method: :delete  %>
                     <%= link_to 'Update', cocktail_path(cocktail[:id]) %>
+                    <%= link_to 'Delete', cocktail_path(cocktail[:id]), method: :delete  %>
                   </div>
-
-                </div>
-
               </div>
+            </div>
             </li>
           <% end %>
         </ul>

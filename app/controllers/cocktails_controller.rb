@@ -1,5 +1,7 @@
 class CocktailsController < ApplicationController
 
+  before_action :set_cocktail, only: [:update, :edit, :show, :destroy]
+
   def home
 
   end
@@ -10,7 +12,6 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
   end
 
@@ -28,19 +29,15 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.update(cocktail_params)
     redirect_to cocktail_path(@cocktail)
   end
 
 
-
   def destroy
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     redirect_to root_path
   end
@@ -51,7 +48,11 @@ class CocktailsController < ApplicationController
 
   private
 
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
+  end
+
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo, :photo_cache)
+    params.require(:cocktail).permit(:name, :photo, :photo_cache, :description)
   end
 end

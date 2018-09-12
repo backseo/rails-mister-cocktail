@@ -1,13 +1,21 @@
 .cards {
-background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
 position: relative;
 height: 190px;
 width: 300px;
-background-size: cover;
 padding: 10px;
 border-radius: 5px;
 margin: 20px;
+box-shadow: 1px 1px 2px 1px;
 }
+
+.tagg:hover {
+  box-shadow: 2px 2px 4px 2px;
+  opacity: 50%;
+
+  }
 
 .cards-category {
 color: white;
@@ -16,20 +24,22 @@ right: 20px;
 }
 
 .cards-description {
-color: white;
-position: absolute;
-bottom: 20px;
-}
-.cards-image {
+  text-align:center;
   color: white;
-position: absolute;
-top: 10px;
-right:10px;
-}
-.row {
-
+  position: absolute;
+  bottom: 4px;
 }
 
 .cards-description h3 {
     text-align: center;
   }
+.crud-line a {
+  font-weight: lighter;
+  text-decoration: none;
+  color: #101010;
+  margin-left: 10px;
+}
+
+.crud-line a:hover {
+  color: white;
+}
