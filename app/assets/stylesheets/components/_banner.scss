@@ -11,23 +11,18 @@ justify-content: space-around;
 align-items: center;
 text-align: center;
 }
-.banner h1 {
+.banner-content h1 {
   color: $light-gray;
   font-size: 70px;
   font-weight: bold;
 }
 
-.banner p {
+.banner-content p {
   color: white;
   font-size: 40px;
   font-weight: lighter;
   opacity: 0.8;
   margin-bottom: 20px;
-}
-
-.banner-content {
-
-
 }
 
 .banner-img {
@@ -40,5 +35,13 @@ text-align: center;
 .btn-primary {
   border-radius: 4px;
   padding-bottom: 8px;
-  font-weight: bolder;
+}
+
+@media only screen and (max-width: 780px) {
+  .banner-content h1 {
+    font-size: 40px;
+  }
+  .banner-content p {
+    font-size: 20px;
+  }
 }

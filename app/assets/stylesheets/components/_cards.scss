@@ -3,29 +3,34 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center center;
 position: relative;
-height: 190px;
-width: 300px;
+height: 160px;
+width: 280px;
 padding: 10px;
 border-radius: 5px;
 margin: 20px;
 box-shadow: 1px 1px 2px 1px;
 }
 
+.tagg {
+  border: 1px gray solid;
+}
+
 .tagg:hover {
+  border: 1px white solid;
   box-shadow: 2px 2px 4px 2px;
   opacity: 50%;
 
   }
 
 .cards-category {
-color: white;
+color: black;
 position: absolute;
 right: 20px;
 }
 
 .cards-description {
   text-align:center;
-  color: white;
+  color: black;
   position: absolute;
   bottom: 4px;
 }

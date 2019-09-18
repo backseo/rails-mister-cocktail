@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="dose-form-box"  style="border: 1px red solid">
+        <div class="dose-form-box">
           <div class="photo">
             <h2><%= @cocktail.name %></h2>
             <%= cl_image_tag @cocktail.photo, crop: :fill %>
@@ -29,5 +29,6 @@
 
   <div class="crud-links">
     <%= link_to 'Delete this cocktail', cocktail_path(@cocktail), method: :delete  %>
+    <%= link_to 'Update this cocktail', edit_cocktail_path(@cocktail) %>
   </div>
 </section>
