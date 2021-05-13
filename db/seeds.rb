@@ -8,14 +8,16 @@
 
 Ingredient.destroy_all
 puts "cleaning ingredients..."
-Ingredient.create(name: "Mint")
 Ingredient.create(name: "Ice")
+Ingredient.create(name: "Whiskey")
 Ingredient.create(name: "Rhum")
 Ingredient.create(name: "Tequila")
+Ingredient.create(name: "Vodka")
 Ingredient.create(name: "Sparkling water")
 Ingredient.create(name: "Brown sugar")
 Ingredient.create(name: "coffee")
 Ingredient.create(name: "Lemon juice")
+Ingredient.create(name: "Mint")
 puts "ingredients added in db !"
 
 Cocktail.destroy_all
